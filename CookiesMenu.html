@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Menu</title>
+    <link rel="stylesheet" href="AddStyle.css">
+    <link rel="stylesheet" href="izakscss.css">
+</head>
+
+<body class="Menubody">
+    
+    <div class="topnav" >
+        <a href="#home" class="active">HOME</a>
+        <a href="#Product">PRODUCT</a>
+        <a href="#contact">CART</a>
+        <a href="#about">PROFILE</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+
+    <section class="AboutSec">
+        <div class="Abt">
+            <h1>COOKIES<span>The sweetest stop on your journey, When the going gets sweet.</span></h1>        
+        </div>
+            <img src="chocoChip.jpg" alt="image">
+    </section>
+
+    <div class="list">
+            <div class="item" data-id="1" data-price="540">
+                <img src="chunk.jpg">
+                <div class="title">Chocolate Chunk Cookies</div>
+                <div class="price">540.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="1" data-price="540">
+                <img src="chunk.jpg">
+                <div class="title">Chocolate Chunk Cookies</div>
+                <div class="price">540.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="2" data-price="540">
+                <img src="redcookies.jpg">
+                <div class="title">Red Velvet Cheescake Cookies</div>
+                <div class="price">540.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="3" data-price="540">
+                <img src="funfetti.jpg">
+                <div class="title">Funfetti Cookies</div>
+                <div class="price">540.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+    </div>
+    
+
+    <script src="appS.js"></script>
+</body>
+</html>
