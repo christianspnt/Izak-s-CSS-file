@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes Menu</title>
+    <link rel="stylesheet" href="AddStyle.css">
+    <link rel="stylesheet" href="izakscss.css">
+</head>
+
+
+<body class="Menubody">
+    
+    <div class="topnav" >
+        <a href="#home" class="active">HOME</a>
+        <a href="#Product">PRODUCT</a>
+        <a href="#contact">CART</a>
+        <a href="#about">PROFILE</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+
+    <section class="AboutSec">
+        <div class="Abt">
+            <h1>Cakes<span>Elegant Cakes for Extraordinary Occasions</span></h1> 
+            <h2>CHOCOLATE MOIST CAKE</h2>       
+        </div>
+            <img src="special.jpg" alt="image">
+    </section>
+
+    <div class="list">
+            
+            
+            <div class="item" data-id="0" data-price="1200">
+                <img src="customize5.jpg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">6"x 5"</div>
+                <div class="price">1200.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="1" data-price="1400">
+                <img src="customize.jpg">
+                <div class="title">7"x 5"</div>
+                <div class="price">1400.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="2" data-price="1600">
+                <img src="customize2.jpg">
+                <div class="title">8"x 5"</div>
+                <div class="price">1600.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="3" data-price="680">
+                <img src="customize3.jpg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">6"x 3"</div>
+                <div class="price">680.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            
+            <div class="item" data-id="4" data-price="780">
+                <img src="customize11.jpg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">7"x 5"</div>
+                <div class="price">780.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+            <div class="item" data-id="5" data-price="880">
+                <img src="minimalcake4.jpeg" alt="Lights" onclick="myFunction(this);">
+                <div class="title">8"x 5"</div>
+                <div class="price">880.00</div>
+                <button onclick="addToCard(this)">Add To Card</button>
+            </div>
+    </div> 
+    
+    <section class="SizeSec">
+        <img src="Cakesize.png">
+        <div class="Abt">
+            <h1>Cake Sizes Guide<span>From Mini to Maxi, We've got you covered!</span></h1>        
+        </div>
+    </section>
+
+    <section class="Specialflavor">
+        <div class="nineth">
+            <h1>Unique Cake Flavor<span>A symphony of Special Flavors!</span></h1>
+        </div>
+
+        <div class="menubody">
+            <div class="wrapper">
+                    <div class="blockcontainer">
+                            <div class="square tp-none" >
+                                <img  class="imgphoto" src="redvelvetCAKE.jpg" alt="image-1" /> 
+                                <div class="content">
+                                    RED VELVET CHEESECAKE <br>
+                                    1300.00
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="blockcontainer">
+                            <div class="square tp-none" >
+                                <img  class="imgphoto" src="UbeCake.jpeg" alt="image-2" /> 
+                                <div class="content">
+                                    UBE MOIST CAKE<br>
+                                    1200.00
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="blockcontainer">
+                            <div class="square tp-none" >
+                                <img  class="imgphoto" src="MochaCoffeeCake.jpeg" alt="image-3" /> 
+                                <div class="content">
+                                    MOCHA MOIST CAKE <br>
+                                    1200.00
+                                </div>
+                            </div>
+                        </div>
+    </section>
+
+
+    <script src="appS.js"></script>
+</body>
+</html>

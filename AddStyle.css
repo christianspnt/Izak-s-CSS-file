@@ -21,11 +21,18 @@
 /*About Section Text*/
 
    .AboutSec .Abt h1 {
-    padding: 25px 10px 30px;
+    padding: 25px 10px 10px;
 	text-align:center; font-size:50px; 
     text-transform:uppercase; color:#222; 
     letter-spacing:1px;
 	font-family:"Playfair Display", serif; font-weight:400;
+  }
+  .AboutSec .Abt h2 {
+    padding: 0px 5px 5px;
+	text-align:center; font-size:40px; 
+    text-transform:uppercase; color:#222; 
+    letter-spacing:1px;
+	font-family:"Playfair Display", serif; font-weight:bold;
   }
   .AboutSec .Abt h1 span {
 	margin-top: 6px;
@@ -299,12 +306,43 @@ ul.breadcrumb {
     border-right: 8px dotted #fb9280;
     width: 50%;
   }
-  .Specialflavor{ /*the About us section*/
+
+
+  .Specialflavor{ /*the  Special cakes  section*/
+	margin: 0;
+	padding: 0;
 	display:flex;
 	align-items:center;
-    justify-content: space-between;
-	background: #ffd6b9;
-	height: 30%;
+	justify-content:center;
+	flex-direction:column;
+	background:#fabfba;
+	min-height: 80vh;
 	background-size: cover;
 	width: 100%;
 }
+
+.Specialflavor .nineth h1 {
+	margin-top: 10%;
+    margin-bottom: 15%;
+	text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
+	font-family:"Playfair Display", serif; font-weight:400;
+  }
+  .Specialflavor .nineth h1 span {
+	  margin-top: 6px;
+	  font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+	  text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+	  display: grid;
+	  grid-template-columns: 1fr max-content 1fr;
+	  grid-template-rows: 27px 0;
+	  grid-gap: 20px;
+	  align-items: center;
+  }
+  
+  .Specialflavor .nineth h1 span:after,.nineth h1 span:before {
+	  content: " ";
+	  display: block;
+	  border-bottom: 1px solid #ccc;
+	  border-top: 1px solid #ccc;
+	  height: 5px;
+	background-color:#f8f8f8;
+  }
