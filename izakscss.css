@@ -67,13 +67,12 @@ button{
 	width: 60%;
 	height: 40px;
 	margin: 10px auto;
-	justify-content: center;
 	display: block;
 	color: #fff;
 	background: #dd88aa;
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: 20px;
+	top: 50px;
 	outline: none;
 	border: none;
 	border-radius: 5px;
@@ -133,17 +132,102 @@ button:hover{
 	position: fixed;
 	z-index: 999;
 	width: 100%;
+	display: flex;
+    flex-wrap: wrap;
   }
 
-#myTopnav{
+.myTopnav{
 	width: 100%;
 	background-color: #f8d0cc;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
 
 }
+.topnav {
+	float: left;
+	overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn button {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit; /* Important for vertical align on mobile phones */
+	margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+	background-color: rgb(194, 133, 133);
+  }
+  
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+	display: none;
+	position:relative;
+	background-color: rgba(211, 108, 108, 0.788);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+	background-color: #da9bb400;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
+  /* Style the links inside the navigation bar */
+  .topnav a {
+	display: block;
+	float: left;
+	color: #be6363;
+	text-align:center;
+	padding: 30px 30px;
+	width:253px;
+	text-decoration: none;
+	font-size: 17px;
+	justify-content:space-around;
+  }
+  /* Change the color of links on hover */
+  .topnav a:hover {
+	background-color: #f1a094;
+	color: black;
+  }
+  /* Add an active class to highlight the current page "HOME"*/
+  .topnav a.active {
+	background-color: #da7492;
+	color: white;
+  }
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+	display: none;
+  }
+  .topnav.responsive a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+  }
+
+  
 /*This body mao ni sya na sizing sa bg to fit on the screen*/
 body{
 	display: absolute	;
@@ -151,6 +235,7 @@ body{
 	min-width: 100%;
 	margin: 0;
 }
+
 
 /*these following bod/body... these are the bg and different sizing of each section*/
   #logo .bod{
@@ -250,38 +335,77 @@ body{
 	background-size: cover;
 	width: 100%;
   }
-  /* Style the links inside the navigation bar */
-  .topnav a {
-	display: block;
-	float: left;
-	color: #be6363;
-	text-align:center;
-	padding: 30px 30px;
-	width:253px;
-	text-decoration: none;
-	font-size: 17px;
-	justify-content:space-around;
-  }
-  /* Change the color of links on hover */
-  .topnav a:hover {
-	background-color: #f1a094;
-	color: black;
-  }
-  /* Add an active class to highlight the current page "HOME"*/
-  .topnav a.active {
-	background-color: #da7492;
-	color: white;
-  }
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-	display: none;
-  }
-  .topnav.responsive a {
-	  float: none;
-	  display: block;
-	  text-align: left;
-  }
 
+  /*SIDENAv Overlay*/
+
+  /* The side navigation menu */
+  .sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #f0c8d5;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	cursor: pointer;
+	margin-top: 5%;
+
+  }
+  
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #361e1e;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+  /* When you mouse over the navigation links, change their color */
+  .side .sidenav a:hover {
+	color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .side .sidenav .closebtn {
+	position: relative;
+	top: 10;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+	transition: margin-left .5s;
+	padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+  
 
 /*Product photoslide*/
 .container { /*this ccontainer is for the image and slidebar */

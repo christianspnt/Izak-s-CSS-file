@@ -61,6 +61,12 @@
     border-left: 8px dotted #cd4662;
     width: 50%;
   }
+  .AboutSec .img{
+    height: 80vh;
+    object-fit: cover;
+    border-left: 8px dotted #cd4662;
+    width: 50%;
+  }
 
 header{
     display: grid;
